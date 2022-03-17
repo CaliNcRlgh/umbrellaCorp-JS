@@ -18,4 +18,12 @@ $(document).ready(function(){
             location.reload()
         })
     }
+
+    
+        setInterval(function(){
+            var reloj = moment().format("h:mm:ss A")
+            $(".reloj").html(reloj)
+        },1000)
+        
+
 })

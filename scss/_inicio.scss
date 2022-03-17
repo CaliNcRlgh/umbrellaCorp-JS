@@ -45,6 +45,15 @@ p {
 	text-align: center;
 }
 
+@media only screen and (max-width: 760px) {
+	.loginFake input[type="text"],
+	.loginFake input[type="password"],
+	.loginFake input[type="email"]{
+    
+    width: 90%;
+	}
+
+}
 @media only screen and (max-width: 340px) {
     .mainTitles {
         h2 {
@@ -64,6 +73,14 @@ p {
 	.buttonIndex {
 		font-size: $font-size-button-xs
 	}
+
+	.loginFake input[type="text"],
+	.loginFake input[type="password"],
+	.loginFake input[type="email"]{
+    
+    width: 90%;
+	}
+
 }
 
 h4 {
