@@ -28,16 +28,10 @@ function addItemToCart(title, price, image){
         'generalTitle'
       );
       for (let i = 0; i < generalTitle.length; i++) {
-        if (generalTitle[i].innerText === title) {
-          let cartSum = generalTitle[
-            i
-          ].parentElement.parentElement.parentElement.querySelector(
-            '.cartSum'
-          );
-          cartSum.value++;
-          updateCart();
-          return;
-        }
+        generalTitle[i].innerText === title ? cartSum = generalTitle[i].parentElement.parentElement.parentElement.querySelector( '.cartSum') : null
+        cartSum.value++
+        updateCart();
+        return
       }
 
     let generalDiv = document.createElement('div')
@@ -106,9 +100,7 @@ function removeItem(event) {
 //Funcion arreglar negativos
 function fixNegative(event){
     let input = event.target
-    if (input.value <= 0){
-        input.value = 1
-    }
+    input.value <= 0 ? (input.value = 1) : null
     updateCart()
 }
 
